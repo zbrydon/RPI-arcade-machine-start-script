@@ -34,6 +34,9 @@ else
     skm linux install
 fi
 
+# Update the environment variable LD_LIBRARY_PATH to source the object file.
+export LD_LIBRARY_PATH=$HOME/.splashkit/source
+
 
 
 # Clone arcade machine repo if it doesn't exist, pull the code if it does
@@ -61,17 +64,6 @@ fi
         echo "Directory does not exist"
         git clone https://github.com/thoth-tech/arcade-games.git games
     fi
-
-    #Compile all games in games directory
-
-    # Enable when game source code is avaliable
-
-    # for game in "games/games/"*
-    #     do
-    #         echo "Compiling: "${game##*/}", Output: ${game}/${game##*/}"
-    #         skm clang++ ""${game}"/*.cpp" -o "${game}/${game##*/}"
-    #         echo
-    # done
 )
 
 # Compile the arcade machine
