@@ -9,8 +9,8 @@ GAMES_DIRECTORY="${HOME_PATH}/arcade-machine/games"
 
 #Update package lists, install curl and git and skm dependencies using distro specific package manager
 if [ -f /etc/debian_version ]; then
-    sudo apt-get update
-    sudo apt-get install curl git $SKM_DEPENDENCIES
+    sudo apt-get update --assume-yes
+    sudo apt-get install curl git $SKM_DEPENDENCIES --assume-yes
 elif [ -f /etc/redhat-release ]; then
     sudo yum check-update
     sudo yum install curl git $SKM_DEPENDENCIES
